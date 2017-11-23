@@ -65,13 +65,6 @@ namespace Ioc
                 .Where(c => c.IsPublic)
                 .OrderBy(c => c.GetParameters().Count());
 
-            /*
-            // select ones we like
-            var possibleConstructors = constructors.Where(c => c.IsPublic);
-
-            // order by parameter count - easiest first
-            var orderedConstructors = possibleConstructors.OrderBy(c => c.GetParameters().Count());
-            */
             foreach(var constructor in constructors)
             {
                 // try and resolve any parameters for the constructor
